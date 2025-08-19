@@ -8,57 +8,33 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Warm natural palette for Caixa do Futuro */
-    --background: 40 20% 97%;
-    --foreground: 30 15% 15%;
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
 
-    --card: 40 25% 98%;
-    --card-foreground: 30 15% 15%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
 
-    --popover: 40 25% 98%;
-    --popover-foreground: 30 15% 15%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
 
-    /* Mint green primary */
-    --primary: 150 30% 60%;
-    --primary-foreground: 40 25% 98%;
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
 
-    /* Warm beige secondary */
-    --secondary: 40 25% 92%;
-    --secondary-foreground: 30 15% 25%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
 
-    /* Soft gold accent */
-    --accent: 45 55% 75%;
-    --accent-foreground: 30 15% 25%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
 
-    /* Muted wood tones */
-    --muted: 35 20% 90%;
-    --muted-foreground: 30 10% 45%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 40 25% 98%;
+    --destructive-foreground: 210 40% 98%;
 
-    --border: 40 15% 88%;
-    --input: 40 15% 88%;
-    --ring: 150 30% 60%;
-
-    /* Custom design tokens */
-    --wood-light: 35 25% 85%;
-    --wood-medium: 30 20% 70%;
-    --wood-dark: 25 15% 55%;
-    --mint-soft: 150 25% 70%;
-    --mint-bright: 150 35% 55%;
-    --gold-soft: 45 45% 80%;
-    --gold-bright: 45 65% 70%;
-    
-    /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--mint-bright)));
-    --gradient-warm: linear-gradient(135deg, hsl(var(--wood-light)), hsl(var(--gold-soft)));
-    --gradient-hero: linear-gradient(135deg, hsl(var(--background)), hsl(var(--wood-light)));
-    
-    /* Shadows */
-    --shadow-soft: 0 4px 16px -4px hsl(var(--wood-medium) / 0.1);
-    --shadow-elevated: 0 8px 32px -8px hsl(var(--wood-dark) / 0.15);
-    --shadow-premium: 0 16px 64px -16px hsl(var(--gold-bright) / 0.1);
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
 
     --radius: 0.5rem;
 
@@ -80,43 +56,33 @@ All colors MUST be HSL.
   }
 
   .dark {
-    /* Warm dark theme */
-    --background: 25 15% 8%;
-    --foreground: 40 20% 95%;
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
 
-    --card: 25 15% 10%;
-    --card-foreground: 40 20% 95%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
 
-    --popover: 25 15% 10%;
-    --popover-foreground: 40 20% 95%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
 
-    --primary: 150 25% 65%;
-    --primary-foreground: 25 15% 8%;
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
 
-    --secondary: 30 15% 18%;
-    --secondary-foreground: 40 20% 95%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
 
-    --accent: 45 45% 65%;
-    --accent-foreground: 25 15% 8%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
 
-    --muted: 30 10% 15%;
-    --muted-foreground: 40 15% 65%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
 
     --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 40 20% 95%;
+    --destructive-foreground: 210 40% 98%;
 
-    --border: 30 10% 20%;
-    --input: 30 10% 20%;
-    --ring: 150 25% 65%;
-
-    /* Dark theme custom tokens */
-    --wood-light: 30 15% 25%;
-    --wood-medium: 25 12% 35%;
-    --wood-dark: 20 8% 45%;
-    --mint-soft: 150 20% 75%;
-    --mint-bright: 150 30% 60%;
-    --gold-soft: 45 40% 75%;
-    --gold-bright: 45 60% 65%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -134,64 +100,6 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground font-sans antialiased;
-  }
-  
-  /* Smooth scrolling */
-  html {
-    scroll-behavior: smooth;
-  }
-}
-
-@layer components {
-  /* Custom gradient backgrounds */
-  .bg-gradient-primary {
-    background: var(--gradient-primary);
-  }
-  
-  .bg-gradient-warm {
-    background: var(--gradient-warm);
-  }
-  
-  .bg-gradient-hero {
-    background: var(--gradient-hero);
-  }
-  
-  /* Premium shadows */
-  .shadow-soft {
-    box-shadow: var(--shadow-soft);
-  }
-  
-  .shadow-elevated {
-    box-shadow: var(--shadow-elevated);
-  }
-  
-  .shadow-premium {
-    box-shadow: var(--shadow-premium);
-  }
-  
-  /* Hover animations */
-  .hover-lift {
-    @apply transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-elevated;
-  }
-  
-  .hover-scale {
-    @apply transition-transform duration-200 ease-out hover:scale-105;
-  }
-  
-  /* Fade in animation */
-  .fade-in {
-    animation: fadeIn 0.6s ease-out forwards;
-  }
-  
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
+    @apply bg-background text-foreground;
   }
 }

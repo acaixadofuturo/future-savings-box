@@ -61,25 +61,7 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				},
-				// Custom Caixa do Futuro colors
-				wood: {
-					light: 'hsl(var(--wood-light))',
-					medium: 'hsl(var(--wood-medium))',
-					dark: 'hsl(var(--wood-dark))'
-				},
-				mint: {
-					soft: 'hsl(var(--mint-soft))',
-					bright: 'hsl(var(--mint-bright))'
-				},
-				gold: {
-					soft: 'hsl(var(--gold-soft))',
-					bright: 'hsl(var(--gold-bright))'
 				}
-			},
-			fontFamily: {
-				sans: ['Inter', 'system-ui', 'sans-serif'],
-				serif: ['Playfair Display', 'serif'],
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
