@@ -3,8 +3,10 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Sparkles, ArrowRight } from 'lucide-react';
 
 const CallToActionSection = () => {
-  const scrollToProducts = () => {
-    document.getElementById('produtos')?.scrollIntoView({ behavior: 'smooth' });
+  const handleWhatsAppContact = () => {
+    const message = "Olá! Gostaria de saber mais sobre as Caixas do Futuro e como posso adquirir uma.";
+    const whatsappUrl = `https://wa.me/351920514152?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, '_blank');
   };
 
   return (
@@ -38,22 +40,22 @@ const CallToActionSection = () => {
               <Button
                 size="lg"
                 className="bg-primary hover:bg-primary/90 text-primary-foreground text-lg px-8 py-4 shadow-premium hover-lift group"
-                onClick={scrollToProducts}
+                onClick={handleWhatsAppContact}
               >
-                Comprar Agora
+                Fale Conosco
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </Button>
               
               <div className="text-center sm:text-left">
                 <p className="text-sm text-muted-foreground">
-                  Encontros presenciais • <span className="font-semibold text-primary">Personalização gratuita</span>
+                  Encontros presenciais • <span className="font-semibold text-primary">Possibilidade de personalização no local (+5€)</span>
                 </p>
               </div>
             </div>
             
             <div className="mt-8 flex justify-center items-center space-x-6 text-sm text-muted-foreground">
               <span className="flex items-center">
-                ✓ Personalização gratuita
+                ✓ Possibilidade de personalização no local
               </span>
               <span className="flex items-center">
                 ✓ Materiais sustentáveis

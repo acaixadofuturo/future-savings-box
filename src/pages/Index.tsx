@@ -5,7 +5,6 @@ import HeroSection from '@/components/HeroSection';
 import AboutSection from '@/components/AboutSection';
 import ProductsSection from '@/components/ProductsSection';
 import BenefitsSection from '@/components/BenefitsSection';
-import TestimonialsSection from '@/components/TestimonialsSection';
 import CallToActionSection from '@/components/CallToActionSection';
 import NewsletterSection from '@/components/NewsletterSection';
 import Footer from '@/components/Footer';
@@ -64,7 +63,6 @@ const Index = () => {
         <AboutSection />
         <ProductsSection onAddToWishlist={addToWishlist} />
         <BenefitsSection />
-        <TestimonialsSection />
         <CallToActionSection />
         <NewsletterSection />
       </main>
@@ -97,7 +95,7 @@ const Head = () => {
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
       metaDescription.setAttribute('content', 
-        'Transforme sua poupança em um hábito simples e divertido com a Caixa do Futuro. Caixinhas premium de madeira sustentável com personalização gratuita. Encontros presenciais em Lisboa.'
+        'Transforme sua poupança em um hábito simples e divertido com a Caixa do Futuro. Caixinhas premium de madeira sustentável com possibilidade de personalização. Encontros presenciais em Lisboa.'
       );
     }
 

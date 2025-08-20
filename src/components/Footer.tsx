@@ -34,7 +34,6 @@ const Footer = () => {
               <li><a href="#sobre" className="hover:text-primary transition-colors">Sobre</a></li>
               <li><a href="#produtos" className="hover:text-primary transition-colors">Produtos</a></li>
               <li><a href="#beneficios" className="hover:text-primary transition-colors">Benefícios</a></li>
-              <li><a href="#depoimentos" className="hover:text-primary transition-colors">Depoimentos</a></li>
             </ul>
           </div>
           
@@ -66,7 +65,7 @@ const Footer = () => {
         <div className="border-t border-background/20 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-background/60 text-sm mb-4 md:mb-0">
-              © 2024 Caixa do Futuro. Todos os direitos reservados.
+              © 2025 Caixa do Futuro. Todos os direitos reservados.
             </p>
             
             <div className="text-center md:text-right">
