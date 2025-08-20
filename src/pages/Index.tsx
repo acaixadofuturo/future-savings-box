@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { useCart } from '@/hooks/useCart';
+import { useWishlist } from '@/hooks/useWishlist';
 import Header from '@/components/Header';
 import HeroSection from '@/components/HeroSection';
 import AboutSection from '@/components/AboutSection';
@@ -9,20 +9,21 @@ import TestimonialsSection from '@/components/TestimonialsSection';
 import CallToActionSection from '@/components/CallToActionSection';
 import NewsletterSection from '@/components/NewsletterSection';
 import Footer from '@/components/Footer';
-import Cart from '@/components/Cart';
+import Wishlist from '@/components/Wishlist';
 
 const Index = () => {
   const {
-    cartItems,
-    isCartOpen,
-    setIsCartOpen,
-    addToCart,
-    removeFromCart,
+    wishlistItems,
+    isWishlistOpen,
+    setIsWishlistOpen,
+    addToWishlist,
+    removeFromWishlist,
     updateQuantity,
     getTotalPrice,
     getTotalItems,
-    clearCart,
-  } = useCart();
+    clearWishlist,
+    getWhatsAppMessage,
+  } = useWishlist();
 
   // Adicionar classes CSS para animações suaves no scroll
   useEffect(() => {
@@ -53,15 +54,15 @@ const Index = () => {
       
       {/* Header fixo */}
       <Header 
-        onCartClick={() => setIsCartOpen(true)}
-        cartItemsCount={getTotalItems()}
+        onWishlistClick={() => setIsWishlistOpen(true)}
+        wishlistItemsCount={getTotalItems()}
       />
       
       {/* Conteúdo principal */}
       <main>
         <HeroSection />
         <AboutSection />
-        <ProductsSection onAddToCart={addToCart} />
+        <ProductsSection onAddToWishlist={addToWishlist} />
         <BenefitsSection />
         <TestimonialsSection />
         <CallToActionSection />
@@ -71,15 +72,16 @@ const Index = () => {
       {/* Footer */}
       <Footer />
       
-      {/* Carrinho lateral */}
-      <Cart
-        isOpen={isCartOpen}
-        onClose={() => setIsCartOpen(false)}
-        cartItems={cartItems}
+      {/* Wishlist lateral */}
+      <Wishlist
+        isOpen={isWishlistOpen}
+        onClose={() => setIsWishlistOpen(false)}
+        wishlistItems={wishlistItems}
         onUpdateQuantity={updateQuantity}
-        onRemoveItem={removeFromCart}
+        onRemoveItem={removeFromWishlist}
         totalPrice={getTotalPrice()}
-        onClearCart={clearCart}
+        onClearWishlist={clearWishlist}
+        whatsAppMessage={getWhatsAppMessage()}
       />
     </div>
   );
@@ -89,13 +91,13 @@ const Index = () => {
 const Head = () => {
   useEffect(() => {
     // Atualizar título da página
-    document.title = 'Caixa do Futuro - Poupança Inteligente e Motivadora';
+    document.title = 'Caixa do Futuro - Poupança Inteligente e Motivadora | Lisboa';
     
     // Atualizar meta description
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
       metaDescription.setAttribute('content', 
-        'Transforme sua poupança em um hábito simples e divertido com a Caixa do Futuro. Caixinhas premium de madeira sustentável para poupança individual, casal e família.'
+        'Transforme sua poupança em um hábito simples e divertido com a Caixa do Futuro. Caixinhas premium de madeira sustentável com personalização gratuita. Encontros presenciais em Lisboa.'
       );
     }
 
@@ -109,9 +111,15 @@ const Head = () => {
       "logo": `${window.location.origin}/logo.png`,
       "contactPoint": {
         "@type": "ContactPoint",
-        "telephone": "+55-11-99999-9999",
+        "telephone": "+351-920-514-152",
         "contactType": "customer service",
-        "email": "contato@caixadofuturo.com"
+        "email": "acaixadofuturo@outlook.com"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Oeiras",
+        "addressRegion": "Lisboa",
+        "addressCountry": "PT"
       },
       "sameAs": [
         "https://instagram.com/caixadofuturo",

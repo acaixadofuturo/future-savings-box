@@ -25,26 +25,39 @@ const HeroSection = () => {
             e divertido
           </h1>
           
-          <p className="text-xl md:text-2xl mb-8 text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            A Caixa do Futuro ajuda você e sua família a economizar de forma prática e motivadora.
+          <p className="text-xl md:text-2xl text-muted-foreground mb-8 leading-relaxed max-w-3xl mx-auto">
+            A Caixa do Futuro ajuda você e sua família a economizar de forma prática e motivadora. 
+            Visite-nos semanalmente em locais diferentes e personalize sua caixa na hora!
           </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
             <Button
               size="lg"
-              className="bg-primary hover:bg-primary/90 text-primary-foreground text-lg px-8 py-3 shadow-premium hover-lift"
               onClick={scrollToProducts}
+              className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-soft hover-lift text-lg px-8 py-4"
             >
-              Compre agora a sua caixa
+              Ver Produtos
             </Button>
-            
             <Button
               variant="outline"
               size="lg"
-              className="text-lg px-8 py-3 border-primary text-primary hover:bg-primary hover:text-primary-foreground"
+              onClick={() => window.open(`https://wa.me/351920514152?text=${encodeURIComponent('Olá! Gostaria de saber mais sobre a Caixa do Futuro e onde vocês estarão esta semana.')}`, '_blank')}
+              className="border-primary text-primary hover:bg-primary hover:text-primary-foreground text-lg px-8 py-4"
             >
-              Saiba mais
+              Falar Connosco
             </Button>
+          </div>
+
+          <div className="text-center space-y-2">
+            <p className="text-sm text-muted-foreground">
+              📍 <strong>Esta semana estamos em:</strong> Oeiras, Lisboa
+            </p>
+            <p className="text-sm text-muted-foreground">
+              🎨 <strong>Personalização gratuita</strong> no local
+            </p>
+            <p className="text-sm text-muted-foreground">
+              📱 WhatsApp: +351 920 514 152
+            </p>
           </div>
         </div>
       </div>

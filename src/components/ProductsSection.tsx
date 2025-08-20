@@ -1,52 +1,45 @@
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardFooter } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { useCart, Product } from '@/hooks/useCart';
+import { useWishlist, Product } from '@/hooks/useWishlist';
 import caixaIndividualImage from '@/assets/caixa-individual.jpg';
-import caixaCasalImage from '@/assets/caixa-casal.jpg';
 import caixaFamiliaImage from '@/assets/caixa-familia.jpg';
 import { toast } from 'sonner';
+import { Heart } from 'lucide-react';
 
 interface ProductsSectionProps {
-  onAddToCart: (product: Product) => void;
+  onAddToWishlist: (product: Product) => void;
 }
 
-const ProductsSection = ({ onAddToCart }: ProductsSectionProps) => {
+const ProductsSection = ({ onAddToWishlist }: ProductsSectionProps) => {
   const products: Product[] = [
     {
       id: '1',
-      name: 'Caixa Individual',
-      price: 79.90,
+      name: 'Caixa P',
+      price: 29.90,
       image: caixaIndividualImage,
-      description: 'Perfeita para objetivos pessoais. Madeira sustentável com compartimentos organizados.'
+      description: '1 compartimento. Perfeita para objetivos pessoais. Madeira sustentável com design minimalista.'
     },
     {
       id: '2',
-      name: 'Caixa Casal',
-      price: 129.90,
-      image: caixaCasalImage,
-      description: 'Ideal para casais. Dois compartimentos individuais e espaço para objetivos em comum.'
-    },
-    {
-      id: '3',
-      name: 'Caixa Família',
-      price: 189.90,
+      name: 'Caixa XL',
+      price: 49.90,
       image: caixaFamiliaImage,
-      description: 'Para toda a família. Múltiplos compartimentos e sistema de educação financeira infantil.'
+      description: '4 compartimentos. Ideal para família ou múltiplos objetivos. Sistema organizacional completo.'
     }
   ];
 
-  const handleAddToCart = (product: Product) => {
-    onAddToCart(product);
-    toast.success(`${product.name} adicionada ao carrinho!`);
+  const handleAddToWishlist = (product: Product) => {
+    onAddToWishlist(product);
+    toast.success(`${product.name} adicionada à lista de desejos!`);
   };
 
   return (
-    <section id="produtos" className="py-20 bg-background">
+    <section id="produtos" className="py-20 bg-muted/30">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center mb-16">
           <Badge variant="secondary" className="mb-4 text-primary bg-primary/10">
-            Nossa Loja
+            Os Nossos Produtos
           </Badge>
           
           <h2 className="text-3xl md:text-5xl font-bold mb-6 text-foreground">
@@ -55,12 +48,12 @@ const ProductsSection = ({ onAddToCart }: ProductsSectionProps) => {
           </h2>
           
           <p className="text-xl text-muted-foreground leading-relaxed">
-            Cada caixa é feita com madeira sustentável e projetada para tornar 
-            a poupança um hábito prazeroso e motivador.
+            Duas opções pensadas para diferentes necessidades. Cada caixa é feita 
+            com madeira sustentável e pode ser personalizada gratuitamente no local.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           {products.map((product, index) => (
             <Card key={product.id} className={`hover-lift shadow-soft ${index === 1 ? 'md:scale-105 border-primary/20' : ''}`}>
               {index === 1 && (
@@ -89,16 +82,17 @@ const ProductsSection = ({ onAddToCart }: ProductsSectionProps) => {
                 </p>
                 
                 <div className="text-3xl font-bold text-primary mb-4">
-                  R$ {product.price.toFixed(2).replace('.', ',')}
+                  €{product.price.toFixed(2)}
                 </div>
               </CardContent>
               
               <CardFooter className="p-6 pt-0">
                 <Button
                   className="w-full bg-primary hover:bg-primary/90 text-primary-foreground shadow-soft hover-lift"
-                  onClick={() => handleAddToCart(product)}
+                  onClick={() => handleAddToWishlist(product)}
                 >
-                  Adicionar ao Carrinho
+                  <Heart className="h-4 w-4 mr-2" />
+                  Adicionar à Lista de Desejos
                 </Button>
               </CardFooter>
             </Card>
@@ -106,8 +100,12 @@ const ProductsSection = ({ onAddToCart }: ProductsSectionProps) => {
         </div>
 
         <div className="text-center mt-12">
-          <p className="text-sm text-muted-foreground">
-            ✓ Frete grátis para todo o Brasil • ✓ Garantia de 30 dias • ✓ Materiais sustentáveis
+          <p className="text-sm text-muted-foreground mb-4">
+            ✓ Personalização gratuita • ✓ Madeira sustentável • ✓ Encontro presencial
+          </p>
+          <p className="text-xs text-muted-foreground">
+            Estamos semanalmente em locais diferentes em Lisboa. 
+            Entre em contacto para saber a nossa localização atual.
           </p>
         </div>
       </div>

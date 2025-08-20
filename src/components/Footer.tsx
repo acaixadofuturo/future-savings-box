@@ -44,15 +44,19 @@ const Footer = () => {
             <ul className="space-y-3 text-background/80">
               <li className="flex items-center">
                 <Mail className="h-4 w-4 mr-2 text-primary" />
-                contato@caixadofuturo.com
+                <a href="mailto:acaixadofuturo@outlook.com" className="hover:text-primary transition-colors">
+                  acaixadofuturo@outlook.com
+                </a>
               </li>
               <li className="flex items-center">
                 <Phone className="h-4 w-4 mr-2 text-primary" />
-                (11) 9999-9999
+                <a href="https://wa.me/351920514152" className="hover:text-primary transition-colors">
+                  +351 920 514 152
+                </a>
               </li>
               <li className="flex items-center">
                 <MapPin className="h-4 w-4 mr-2 text-primary" />
-                São Paulo, SP
+                Oeiras, Lisboa
               </li>
             </ul>
           </div>

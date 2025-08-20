@@ -1,66 +1,85 @@
-import { Target, Users, Heart } from 'lucide-react';
+import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
+import { Target, Users, Palette, MapPin } from 'lucide-react';
 
 const AboutSection = () => {
   return (
-    <section id="sobre" className="py-20 bg-secondary/30">
+    <section id="sobre" className="py-20 bg-background">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center mb-16">
+          <Badge variant="secondary" className="mb-4 text-primary bg-primary/10">
+            Como Funciona
+          </Badge>
+          
           <h2 className="text-3xl md:text-5xl font-bold mb-6 text-foreground">
-            Como funciona a{' '}
-            <span className="text-primary">Caixa do Futuro</span>
+            A poupança nunca foi tão{' '}
+            <span className="text-primary">simples e motivadora</span>
           </h2>
           
           <p className="text-xl text-muted-foreground leading-relaxed">
-            Uma forma simples e motivadora de guardar dinheiro aos poucos, 
-            marcar seu progresso e alcançar seus objetivos financeiros.
+            Desenvolvemos caixas especiais feitas em madeira sustentável para tornar 
+            a poupança um hábito visual, tátil e emocionalmente recompensador.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 mb-16">
-          <Card className="hover-lift bg-card shadow-soft">
-            <CardContent className="p-8 text-center">
-              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+          <Card className="text-center hover-lift shadow-soft">
+            <CardContent className="p-6">
+              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Target className="h-8 w-8 text-primary" />
               </div>
-              <h3 className="text-2xl font-bold mb-4 text-foreground">Caixa Individual</h3>
-              <p className="text-muted-foreground leading-relaxed">
-                Perfeita para quem quer começar a poupar sozinho. 
-                Compartimentos organizados para diferentes objetivos pessoais.
+              <h3 className="text-xl font-bold mb-3">Defina Objetivos</h3>
+              <p className="text-muted-foreground">
+                Escolha sua meta financeira e visualize seu progresso de forma tangível
               </p>
             </CardContent>
           </Card>
 
-          <Card className="hover-lift bg-card shadow-soft">
-            <CardContent className="p-8 text-center">
-              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Heart className="h-8 w-8 text-primary" />
+          <Card className="text-center hover-lift shadow-soft">
+            <CardContent className="p-6">
+              <div className="w-16 h-16 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Users className="h-8 w-8 text-accent-foreground" />
               </div>
-              <h3 className="text-2xl font-bold mb-4 text-foreground">Caixa Casal</h3>
-              <p className="text-muted-foreground leading-relaxed">
-                Ideal para casais que querem poupar juntos. 
-                Compartimentos separados e espaço para objetivos em comum.
+              <h3 className="text-xl font-bold mb-3">Para Todos</h3>
+              <p className="text-muted-foreground">
+                Duas opções: Caixa P (individual) e Caixa XL (família/múltiplos objetivos)
               </p>
             </CardContent>
           </Card>
 
-          <Card className="hover-lift bg-card shadow-soft">
-            <CardContent className="p-8 text-center">
-              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Users className="h-8 w-8 text-primary" />
+          <Card className="text-center hover-lift shadow-soft">
+            <CardContent className="p-6">
+              <div className="w-16 h-16 bg-wood-light rounded-full flex items-center justify-center mx-auto mb-4">
+                <Palette className="h-8 w-8 text-wood-dark" />
               </div>
-              <h3 className="text-2xl font-bold mb-4 text-foreground">Caixa Família</h3>
-              <p className="text-muted-foreground leading-relaxed">
-                Envolve toda a família na educação financeira. 
-                Múltiplos compartimentos para cada membro e objetivos familiares.
+              <h3 className="text-xl font-bold mb-3">Personalização</h3>
+              <p className="text-muted-foreground">
+                Personalize sua caixa na hora em nosso espaço de arte itinerante
+              </p>
+            </CardContent>
+          </Card>
+
+          <Card className="text-center hover-lift shadow-soft">
+            <CardContent className="p-6">
+              <div className="w-16 h-16 bg-mint-soft/30 rounded-full flex items-center justify-center mx-auto mb-4">
+                <MapPin className="h-8 w-8 text-mint-bright" />
+              </div>
+              <h3 className="text-xl font-bold mb-3">Encontre-nos</h3>
+              <p className="text-muted-foreground">
+                Estamos semanalmente em diferentes locais de Lisboa para te atender
               </p>
             </CardContent>
           </Card>
         </div>
 
-        <div className="text-center">
-          <p className="text-lg text-muted-foreground italic">
-            "Pequenas economias hoje, grandes conquistas amanhã"
+        <div className="max-w-3xl mx-auto text-center">
+          <h3 className="text-2xl font-bold mb-4 text-foreground">
+            Mais que uma caixa, uma experiência
+          </h3>
+          <p className="text-lg text-muted-foreground leading-relaxed">
+            Combinamos a tradição da poupança física com design moderno e sustentável. 
+            Cada caixa é feita com madeira certificada e pode ser personalizada 
+            no momento da compra no nosso espaço de arte móvel.
           </p>
         </div>
       </div>

@@ -46,20 +46,20 @@ const CallToActionSection = () => {
               
               <div className="text-center sm:text-left">
                 <p className="text-sm text-muted-foreground">
-                  <span className="font-semibold text-primary">Frete grátis</span> • Garantia de 30 dias
+                  Encontros presenciais • <span className="font-semibold text-primary">Personalização gratuita</span>
                 </p>
               </div>
             </div>
             
             <div className="mt-8 flex justify-center items-center space-x-6 text-sm text-muted-foreground">
               <span className="flex items-center">
-                ✓ Mais de 1000 clientes satisfeitos
+                ✓ Personalização gratuita
               </span>
               <span className="flex items-center">
                 ✓ Materiais sustentáveis
               </span>
               <span className="flex items-center">
-                ✓ Entrega em todo Brasil
+                ✓ Encontro presencial
               </span>
             </div>
           </CardContent>
